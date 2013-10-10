@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleLocalSettings">
+    <option name="availableTasks">
+      <set>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the AttributeTags demo" />
+          <option name="name" value="AttributeTagsDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="AttributeTagsDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the BindList demo" />
+          <option name="name" value="BindListDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="BindListDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the BindTree demo" />
+          <option name="name" value="BindTreeDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="BindTreeDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the CategoryChange demo" />
+          <option name="name" value="CategoryChangeDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="CategoryChangeDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the ComposedDirty demo" />
+          <option name="name" value="ComposedDirtyDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="ComposedDirtyDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the Crud demo" />
+          <option name="name" value="CrudDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="CrudDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the DependentChoiceBox demo" />
+          <option name="name" value="DependentChoiceBoxDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="DependentChoiceBoxDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the DirtyAttributeFlag demo" />
+          <option name="name" value="DirtyAttributeFlagDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="DirtyAttributeFlagDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the GrailsClientCrud demo" />
+          <option name="name" value="GrailsClientCrudDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="GrailsClientCrudDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the GrailsClientPerformanceJavaFx demo" />
+          <option name="name" value="GrailsClientPerformanceJavaFxDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="GrailsClientPerformanceJavaFxDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the GrailsClientPerformanceSwing demo" />
+          <option name="name" value="GrailsClientPerformanceSwingDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="GrailsClientPerformanceSwingDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the GrailsClientPush demo" />
+          <option name="name" value="GrailsClientPushDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="GrailsClientPushDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the GrailsManyEvents demo" />
+          <option name="name" value="GrailsManyEventsDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="GrailsManyEventsDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the GrailsMultipleAttributesSwitch demo" />
+          <option name="name" value="GrailsMultipleAttributesSwitchDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="GrailsMultipleAttributesSwitchDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the GrailsSharedTacho demo" />
+          <option name="name" value="GrailsSharedTachoDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="GrailsSharedTachoDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the GrailsSmallFootprint demo" />
+          <option name="name" value="GrailsSmallFootprintDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="GrailsSmallFootprintDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the LazyLoading demo" />
+          <option name="name" value="LazyLoadingDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="LazyLoadingDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the MasterDetail demo" />
+          <option name="name" value="MasterDetailDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="MasterDetailDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the MultipleAttributesConverter demo" />
+          <option name="name" value="MultipleAttributesConverterDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="MultipleAttributesConverterDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the MultipleAttributes demo" />
+          <option name="name" value="MultipleAttributesDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="MultipleAttributesDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the MultipleAttributesSwitch demo" />
+          <option name="name" value="MultipleAttributesSwitchDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="MultipleAttributesSwitchDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the MultipleSelection demo" />
+          <option name="name" value="MultipleSelectionDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="MultipleSelectionDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the NewAndSave demo" />
+          <option name="name" value="NewAndSaveDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="NewAndSaveDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the PerformanceJavaFx demo" />
+          <option name="name" value="PerformanceJavaFxDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="PerformanceJavaFxDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the PerformanceSwing demo" />
+          <option name="name" value="PerformanceSwingDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="PerformanceSwingDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the Push demo" />
+          <option name="name" value="PushDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="PushDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the Reset demo" />
+          <option name="name" value="ResetDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="ResetDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the Save demo" />
+          <option name="name" value="SaveDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="SaveDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the Search demo" />
+          <option name="name" value="SearchDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="SearchDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the SharedAttributes demo" />
+          <option name="name" value="SharedAttributesDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="SharedAttributesDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the SingleAttributeMultipleBindings demo" />
+          <option name="name" value="SingleAttributeMultipleBindingsDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="SingleAttributeMultipleBindingsDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the SmallFootprint demo" />
+          <option name="name" value="SmallFootprintDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="SmallFootprintDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="start the Swing demo" />
+          <option name="name" value="SwingDemo" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="internal" />
+          <option name="name" value="SwingDemoPreparation" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="apidoc" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles the outputs of this project." />
+          <option name="name" value="assemble" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project." />
+          <option name="name" value="build" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+          <option name="name" value="buildDependents" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="buildGuide" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles and tests this project and all projects it depends on." />
+          <option name="name" value="buildNeeded" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs all checks." />
+          <option name="name" value="check" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles the main classes." />
+          <option name="name" value="classes" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Deletes the build directory." />
+          <option name="name" value="clean" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Generate Cobertura coverage reports after running tests." />
+          <option name="name" value="cobertura" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compiles the main Groovy source." />
+          <option name="name" value="compileGroovy" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compiles the main Java source." />
+          <option name="name" value="compileJava" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compiles the test Groovy source." />
+          <option name="name" value="compileTestGroovy" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Compiles the test Java source." />
+          <option name="name" value="compileTestJava" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Bundles the project as a JVM application with libs and OS specific scripts." />
+          <option name="name" value="distZip" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Generates Groovydoc API documentation for the main source code." />
+          <option name="name" value="groovydoc" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="groovydocJar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Does a maven install of the archives artifacts into the local .m2 cache." />
+          <option name="name" value="install" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Installs the project as a JVM application along with libs and OS specific scripts." />
+          <option name="name" value="installApp" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Instrument code for Cobertura coverage reports" />
+          <option name="name" value="instrument" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles a jar archive containing the main classes." />
+          <option name="name" value="jar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Generates Javadoc API documentation for the main source code." />
+          <option name="name" value="javadoc" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="List all available demos" />
+          <option name="name" value="listDemos" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="make all dirs for project setup" />
+          <option name="name" value="makeDirs" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="pdfGuide" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Processes the main resources." />
+          <option name="name" value="processResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Processes the test resources." />
+          <option name="name" value="processTestResources" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="This task merges the module cobertura reports and generates one report." />
+          <option name="name" value="projectCoverage" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs this project as a JVM application" />
+          <option name="name" value="run" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="signArchives" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="sourceZip" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="sourcesJar" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Creates OS specific scripts to run the project as a JVM application." />
+          <option name="name" value="startScripts" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Runs the unit tests." />
+          <option name="name" value="test" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Assembles the test classes." />
+          <option name="name" value="testClasses" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="Uploads all artifacts belonging to configuration ':client-javafx:archives'" />
+          <option name="name" value="uploadArchives" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="description" value="create a gradlew" />
+          <option name="name" value="wrap" />
+        </GradleTaskDescriptor>
+        <GradleTaskDescriptor>
+          <option name="name" value="zipGuide" />
+        </GradleTaskDescriptor>
+      </set>
+    </option>
+  </component>
+  <component name="IdProvider" IDEtalkID="B62ECA68478AB4C3EC50020224B51DEF" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.7 u25" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+
