@@ -46,7 +46,7 @@ class DesignerView {
     }
 
     def addToolsDragNDrop() {
-        findUIElement('toolBar').children.each { addToolGesture(it, findUIElement('sceneRoot')) }
+        findUIElement('toolBar').children.each { addToolGestures(it, findUIElement('sceneRoot')) }
         initDesignerPane( findUIElement('designerPane') )
     }
 
@@ -106,13 +106,11 @@ class DesignerView {
         primaryStage.scene.lookup("#$name")
     }
 
-
-
-    private void addToolGesture(Node node, Node sceneRoot) {
-        node.onDragDetected = { MouseEvent e ->
+    private void addToolGestures(Node toolNode, Node sceneRoot) {
+        toolNode.onDragDetected = { MouseEvent e ->
             SnapshotParameters snapParams = new SnapshotParameters();
             snapParams.fill = Color.TRANSPARENT;
-            dragImageView.image = node.snapshot(snapParams, null);
+            dragImageView.image = toolNode.snapshot(snapParams, null);
 
             sceneRoot.getChildren().add(dragImageView);
 
@@ -120,7 +118,7 @@ class DesignerView {
             e.consume();
         } as EventHandler
 
-        node.onMouseDragged = { MouseEvent e ->
+        toolNode.onMouseDragged = { MouseEvent e ->
             Point2D localPoint = sceneRoot.sceneToLocal(new Point2D(e.sceneX, e.sceneY));
             dragImageView.relocate(
                     (int) (localPoint.getX() - dragImageView.boundsInLocal.width / 2),
@@ -129,27 +127,27 @@ class DesignerView {
             e.consume();
         } as EventHandler
 
-        node.onMouseEntered = { MouseEvent e ->
-            node.setCursor(Cursor.HAND);
+        toolNode.onMouseEntered = { MouseEvent e ->
+            toolNode.setCursor(Cursor.HAND);
         } as EventHandler
 
-        node.onMousePressed = { MouseEvent e ->
+        toolNode.onMousePressed = { MouseEvent e ->
 //            dragItem = node;
             dragImageView.mouseTransparent = true;
-            node.mouseTransparent = true;
-            node.cursor = Cursor.CLOSED_HAND;
+            toolNode.mouseTransparent = true;
+            toolNode.cursor = Cursor.CLOSED_HAND;
         } as EventHandler
 
-        node.onMouseReleased = { MouseEvent e ->
+        toolNode.onMouseReleased = { MouseEvent e ->
 //            dragItem = null;
             dragImageView.mouseTransparent = false;
-            node.mouseTransparent = false;
-            node.cursor = Cursor.DEFAULT;
+            toolNode.mouseTransparent = false;
+            toolNode.cursor = Cursor.DEFAULT;
             sceneRoot.getChildren().remove(dragImageView);
         } as EventHandler
     }
 
-    def initDesignerPane(Node designPane) {
+    private static def initDesignerPane(Node designPane) {
         designPane.onMouseDragEntered = { MouseDragEvent e ->
             designPane.style = "-fx-border-color:red;-fx-border-width:2;-fx-border-style:solid;";
             e.consume();
@@ -165,7 +163,4 @@ class DesignerView {
             e.consume();
         } as EventHandler;
     }
-
 }
-
-
