@@ -32,4 +32,11 @@ class FX {
     static final String PIE_VALUE   = "pieValue"
     static final String TOOLTIP     = "tooltip"
     static final String STYLE_CLASS = "styleClass"
+
+    //tool names
+    static final String TABLE       = "table_tool"
+    static final String CROSS_TABLE = "cross_table_tool"
+    static final String TEXT_FIELD  = "text_field_tool"
+    static final String IMAGE       = "image_tool"
+    static final String LIST        = "list_tool"
 }

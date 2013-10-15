@@ -7,9 +7,16 @@ import javafx.scene.Cursor;
 import javafx.scene.Node
 import javafx.scene.SnapshotParameters
 import javafx.scene.image.ImageView
+import javafx.scene.input.ClipboardContent
+import javafx.scene.input.DataFormat
+import javafx.scene.input.DragEvent
+import javafx.scene.input.Dragboard
 import javafx.scene.input.MouseDragEvent;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.input.MouseEvent
+import javafx.scene.input.TransferMode;
 import javafx.scene.paint.Color
+import javafx.scene.paint.Paint
+import javafx.scene.shape.Rectangle
 import javafx.stage.Stage
 import org.opendolphin.core.client.ClientAttribute;
 import org.opendolphin.core.client.ClientDolphin
@@ -100,66 +107,119 @@ class DesignerView {
 //        }
     }
 
-
-
     def findUIElement(String name) {
         primaryStage.scene.lookup("#$name")
     }
 
     private void addToolGestures(Node toolNode, Node sceneRoot) {
+        toolNode.onMouseEntered = { MouseEvent e ->
+            toolNode.setCursor(Cursor.HAND);
+            e.consume()
+        } as EventHandler
+
         toolNode.onDragDetected = { MouseEvent e ->
             SnapshotParameters snapParams = new SnapshotParameters();
             snapParams.fill = Color.TRANSPARENT;
             dragImageView.image = toolNode.snapshot(snapParams, null);
 
-            sceneRoot.getChildren().add(dragImageView);
+            if (!sceneRoot.getChildren().contains(dragImageView)) {
+                sceneRoot.getChildren().add(dragImageView);
+            }
 
-            dragImageView.startFullDrag();
-            e.consume();
+            dragImageView.opacity = 0.5;
+            dragImageView.toFront();
+            dragImageView.mouseTransparent = true;
+            dragImageView.visible = true;
+            dragImageView.relocate(
+                    (int) (e.sceneX - dragImageView.boundsInLocal.width / 2),
+                    (int) (e.sceneY - dragImageView.boundsInLocal.height / 2));
+
+            Dragboard db = toolNode.startDragAndDrop(TransferMode.COPY)
+            ClipboardContent content = new ClipboardContent()
+            content.putString(toolNode.id)
+            db.setContent(content)
+
+            e.consume()
         } as EventHandler
 
         toolNode.onMouseDragged = { MouseEvent e ->
-            Point2D localPoint = sceneRoot.sceneToLocal(new Point2D(e.sceneX, e.sceneY));
-            dragImageView.relocate(
-                    (int) (localPoint.getX() - dragImageView.boundsInLocal.width / 2),
-                    (int) (localPoint.getY() - dragImageView.boundsInLocal.height / 2)
-            );
+            dragOverImageView(new Point2D(e.sceneX, e.sceneY))
             e.consume();
-        } as EventHandler
-
-        toolNode.onMouseEntered = { MouseEvent e ->
-            toolNode.setCursor(Cursor.HAND);
         } as EventHandler
 
         toolNode.onMousePressed = { MouseEvent e ->
-//            dragItem = node;
             dragImageView.mouseTransparent = true;
-            toolNode.mouseTransparent = true;
             toolNode.cursor = Cursor.CLOSED_HAND;
         } as EventHandler
 
+        toolNode.onDragDone = { DragEvent e ->
+            e.consume()
+        } as EventHandler
+
         toolNode.onMouseReleased = { MouseEvent e ->
-//            dragItem = null;
             dragImageView.mouseTransparent = false;
-            toolNode.mouseTransparent = false;
             toolNode.cursor = Cursor.DEFAULT;
-            sceneRoot.getChildren().remove(dragImageView);
+//            sceneRoot.getChildren().remove(dragImageView);
+            dragImageView.setVisible(false)
+            e.consume()
+        } as EventHandler
+
+        sceneRoot.onDragOver = { DragEvent e ->
+            dragOverImageView(new Point2D(e.sceneX, e.sceneY))
+            e.consume();
         } as EventHandler
     }
 
-    private static def initDesignerPane(Node designPane) {
-        designPane.onMouseDragEntered = { MouseDragEvent e ->
-            designPane.style = "-fx-border-color:red;-fx-border-width:2;-fx-border-style:solid;";
+    private void dragOverImageView(Point2D eventPoint) {
+        Point2D localPoint = findUIElement('sceneRoot').sceneToLocal(eventPoint);
+        dragImageView.relocate(
+                (int) (localPoint.x - dragImageView.boundsInLocal.width / 2),
+                (int) (localPoint.y - dragImageView.boundsInLocal.height / 2));
+    }
+
+    private void initDesignerPane(Node designPane) {
+        designPane.onDragEntered = { DragEvent e ->
+            if (!e.gestureSource.is(designPane) && e.dragboard.hasString()){
+                designPane.style = "-fx-border-color:red;-fx-border-width:2;-fx-border-style:solid;";
+            }
             e.consume();
         } as EventHandler;
 
-        designPane.onMouseDragExited = { MouseDragEvent e ->
+//        designPane.onMouseDragExited = { MouseDragEvent e ->
+//            designPane.style = "-fx-border-style:none;";
+//            e.consume();
+//        } as EventHandler;
+//
+//        designPane.onMouseDragReleased = { MouseDragEvent e ->
+//            designPane.children.add(e.gestureSource)
+//            e.consume();
+//        } as EventHandler;
+
+        designPane.onDragExited = { DragEvent e ->
             designPane.style = "-fx-border-style:none;";
             e.consume();
         } as EventHandler;
 
-        designPane.onMouseDragReleased = { MouseDragEvent e ->
-            designPane.children.add(e.gestureSource)
+        designPane.onDragOver = { DragEvent e ->
+            if (!e.gestureSource.is(designPane) && e.dragboard.hasString()){
+                e.acceptTransferModes(TransferMode.COPY)
+            }
+
+            dragOverImageView(new Point2D(e.sceneX, e.sceneY))
+            e.consume();
+        } as EventHandler;
+
+        designPane.onDragDropped = { DragEvent e ->
+            Dragboard db = e.dragboard;
+            boolean success = false
+
+            if (db.hasString()) {
+                designPane.children.add(new Rectangle(20d, 20d, Paint.valueOf("GREEN")))
+                success = true
+            }
+
+            dragImageView.visible = false
+            e.dropCompleted = success
             e.consume();
         } as EventHandler;
     }

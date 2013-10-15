@@ -22,17 +22,17 @@
   <left>
     <FlowPane id="toolBar" cache="false" depthTest="INHERIT" hgap="4.0" maxWidth="250.0" minHeight="-1.0" minWidth="-1.0" mouseTransparent="false" pickOnBounds="true" prefHeight="736.0" prefWidth="190.0" prefWrapLength="180.0" snapToPixel="true" style="-fx-background-color: DAE6F3;&#10;" vgap="4.0" BorderPane.alignment="CENTER_LEFT">
       <children>
-        <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="tool">
+        <ImageView id="id1" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="tool">
           <image>
             <Image url="@img/chart_1.png" />
           </image>
         </ImageView>
-        <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="tool">
+        <ImageView id="id2" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="tool">
           <image>
             <Image url="@img/chart_2.png" />
           </image>
         </ImageView>
-        <ImageView fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="tool">
+        <ImageView id="id3" fitHeight="60.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="tool">
           <image>
             <Image url="@img/chart_3.png" />
           </image>
