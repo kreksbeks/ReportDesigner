@@ -1,6 +1,6 @@
 package com.voli.soft.integration
 
-import com.voli.soft.DesignerView
+import com.voli.soft.view.DesignerView
 
 def config = new JavaFxInMemoryConfig()
 def dolphin = config.serverDolphin

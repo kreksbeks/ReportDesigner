@@ -1,4 +1,4 @@
-package com.voli.soft
+package com.voli.soft.view
 
 //@Grab('org.codehaus.groovyfx:groovyfx:0.3.1')
 import javafx.event.EventHandler;
@@ -214,6 +214,11 @@ class DesignerView {
             boolean success = false
 
             if (db.hasString()) {
+
+                String modelId = createModel(e)
+                propertiesEditorTransition(modelId)
+                addBinding(modelId)
+
                 designPane.children.add(new Rectangle(20d, 20d, Paint.valueOf("GREEN")))
                 success = true
             }
@@ -222,5 +227,17 @@ class DesignerView {
             e.dropCompleted = success
             e.consume();
         } as EventHandler;
+    }
+
+    String createModel(DragEvent dragEvent) {
+        return null;
+    }
+
+    def propertiesEditorTransition(String s) {
+
+    }
+
+    def addBinding(String s) {
+
     }
 }
